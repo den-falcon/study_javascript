@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         let message;
-        let userInput = prompt("Введите количество секунд:");
-        userInput = parseInt(userInput);
-        const hours = userInput / 60 / 60;
+        const userInput = parseInt( prompt("Введите количество секунд:") );
+        const hours = userInput / 3600;
 
         if (hours > 0 && hours < 1) {
             message = `${userInput}\nОсталось менее часа.`;
@@ -29,4 +30,5 @@
         alert(message);
     </script>
 </body>
+
 </html>
