@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userAge = prompt("Введите свой возраст:");
+        userAge = parseInt(userAge);
+
+        if (1 <= userAge && userAge <= 13) {
+            alert("Посмотрите Холодное сердце.");
+        } else if (14 <= userAge && userAge <= 17) {
+            alert("Посмотрите Вокруг света за 80 дней.");
+        } else if (18 <= userAge && userAge <= 90) {
+            alert("Посмотрите Аватара.");
+        } else if (91 <= userAge && userAge <= 120) {
+            alert("Воу! Вы еще живы? Тогда посмотрите Двухсотлетний человек...");
+        } else if (userAge < 1) {
+            alert("Вы слишком малы, либо еще не родились чтобы смотреть фильмы)");
+        } else if (userAge > 120) {
+            alert("Люди столько не живут. Укажите дргой возраст.");
+        } else {
+            alert("Указан некорректный возраст.");
+        }
+    </script>
+</body>
+</html>
