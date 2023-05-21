@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message;
+        let userInput = prompt("Введите количество секунд:");
+        userInput = parseInt(userInput);
+        const hours = userInput / 60 / 60;
+
+        if (hours > 0 && hours < 1) {
+            message = `${userInput}\nОсталось менее часа.`;
+        } else if (hours >= 1 && hours < 2) {
+            message = `${userInput}\nОстался 1 час.`;
+        } else if (hours >= 2 && hours < 5) {
+            message = `${userInput}\nОсталось ${Math.floor(hours)} часа.`;
+        } else if (hours >= 5 && hours <= 8) {
+            message = `${userInput}\nОсталось ${Math.floor(hours)} часов.`;
+        } else if (hours === 0) {
+            message = `${userInput}\nРабочий день окончен.`;
+        } else {
+            message = "Введите значение от 0 до 28800";
+        }
+        alert(message);
+    </script>
+</body>
+</html>

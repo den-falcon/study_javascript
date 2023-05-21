@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message;
+        const dataArray = ["milk", "beer", "beer", "milk", "milk"];
+
+        for (data of dataArray) {
+            switch (data) {
+                case "milk":
+                    message = "good";
+                    break;
+                case "beer":
+                    message = "bad";
+                    break;
+                default:
+                    message = "incorrect data";
+                    break;
+            }
+            console.log(message);
+        }
+    </script>
+</body>
+</html>
