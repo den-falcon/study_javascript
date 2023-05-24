@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const firstNumberFromUser = parseInt( prompt("Введите первое целое число:") );
+        const secondNumberFromUser = parseInt( prompt("Введите второе целое число:") );
+
+        if (firstNumberFromUser > secondNumberFromUser) {
+            alert("Первое число больше второго.");
+        } else if (firstNumberFromUser < secondNumberFromUser) {
+            alert("Первое число меньше второго.");
+        } else if (firstNumberFromUser === secondNumberFromUser) {
+            alert("Числа равны.")
+        } else {
+            alert("Оба или одно из введенных значений не является числом.")
+        }
+    </script>
+</body>
+</html>

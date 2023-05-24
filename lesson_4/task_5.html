@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const difficult = prompt("Введите уровень сложности:\n1. низкая\n2. средняя\n3. высокая");
+
+        let totalQuestions = correctAnswers = incorrectAnswers = 0;
+        let incorrectAnswerGroups = [];
+        let operands;
+
+        switch ( difficult.toLowerCase() ) {
+                case "1":
+                case "низкая":
+                    operands = [1, 2];
+                    break;
+                case "2":
+                case "средняя":
+                    operands = [3, 4, 5];
+                    break;
+                case "3":
+                case "высокая":
+                    operands = [3, 4, 6, 7, 8, 9];
+                    break;
+                default:
+                    operands = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            }
+
+        for (let i = 0; i < 9; i++) {
+            incorrectAnswerGroups[i] = [i + 1, 0];
+        }
+
+        while (difficult !== null) {
+            const firstIndex = Math.floor( Math.random() * operands.length );
+            const secondIndex = Math.floor( Math.random() * operands.length );
+            const firstOperand = operands[firstIndex];
+            const secondOperand = operands[secondIndex];
+            const userAnswer = prompt(`${firstOperand} * ${secondOperand} = ?`);
+            
+            if (userAnswer === null) break;
+
+            if (+userAnswer === firstOperand * secondOperand) {
+                correctAnswers++;
+                alert("Бингооо! =)");
+            } else {
+
+                if (firstOperand !== secondOperand) {
+                    incorrectAnswerGroups[secondOperand - 1][1] += 1; 
+                }
+
+                incorrectAnswerGroups[firstOperand - 1][1] += 1;
+                incorrectAnswers++;
+                alert("Ошибочка... =(")
+            }
+        }
+
+        totalQuestions = correctAnswers + incorrectAnswers;
+
+        let topIncorrectGroups = incorrectAnswerGroups.sort((group1, group2) => group1[1] < group2[1]);
+        let message = (
+            `Статистика:\n` +
+            `\tКоличество вопросов: ${totalQuestions}\n` +
+            `\tПравильных ответов: ${correctAnswers}\n` +
+            `\tНеправильных ответов: ${incorrectAnswers}\n` +
+            `Топ 3 неправильных:\n`
+            );
+
+        for (let i = 0; i < 3; i++) {
+            message += `\tОшибок в таблице на ${topIncorrectGroups[i][0]}: ${topIncorrectGroups[i][1]}\n`;
+        }
+
+        alert(message);
+     </script>
+</body>
+</html>

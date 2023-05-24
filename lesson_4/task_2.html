@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const messageFromUser = prompt("Введите сообщение:");
+        const frame = "*".repeat(messageFromUser.length + 4);
+        const resultMessage = `${frame}\n* ${messageFromUser} *\n${frame}`;
+
+        console.log(resultMessage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const userAge = +prompt("Введите количество полных лет:");
+        const leapYears = Math.floor(userAge / 4);
+        const notLeapYears = userAge - leapYears;
+        const months = userAge * 12;
+        const days = notLeapYears * 365 + leapYears * 366;
+        const minutes = days * 24 * 60;
+        const seconds = minutes * 60;
+
+        alert(`Месяцы: ${months}\nДни: ${days}\nМинуты: ${minutes}\nСекунды: ${seconds}`);
+    </script>
+</body>
+</html>
