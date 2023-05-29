@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countChars(char, string) {
+            let count = 0;
+            let pos = -1;
+
+            while ((pos = string.indexOf(char, pos + 1)) !== -1) {
+                count++;
+            }
+
+            return count;
+        }
+
+        console.log( countChars('b', 'bbbbb') );
+        console.log( countChars('s', 'mississippi') );
+        console.log( countChars('w', 'hello') );
+        console.log( countChars('B', 'book') );
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validateNumber() {
+            let numberFromUser = prompt("Введите число:");
+            return (
+                numberFromUser === null ? "Вы нажали Отмена" :
+                numberFromUser === "" ? "Вы ничего не ввели" :
+                +numberFromUser === 0 ? "Вы ввели ноль" :
+                +numberFromUser > 0 ? "Вы ввели положительное число" :
+                +numberFromUser < 0 ? "Вы ввели отрицательное число" :
+                "Вы ввели не число"
+            );
+        }
+
+        alert( validateNumber() );
+    </script>
+</body>
+</html>

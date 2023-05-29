@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiply(a, b) {
+
+            if (a !== undefined && b !== undefined) {
+                return a / (1 / b);
+            }
+
+            alert("Оба параметра обязательны!");
+            return;
+        }     
+
+        console.log( multiply(2, 5) );
+        console.log( multiply(3) );
+        console.log( multiply(3, 3) );
+        console.log( multiply() );
+        console.log( multiply(10, 12) );
+    </script>
+</body>
+</html>
